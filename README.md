@@ -112,7 +112,7 @@ classDiagram
 
 Extracted and transformed raw data in Power Query to enrich categorical variables and optimize DAX execution performance.
 
-**File**: [`power_query/m_transformations.m`](power_query/m_transformations.m)
+**File**: [`power_query/m_transformations.pq`](power_query/m_transformations.pq)
 
 ```powerquery
 // Excerpt: Categorical Binning & Binary Flag Transformation in Power Query M
@@ -221,7 +221,7 @@ hr-employee-attrition-powerbi/
 │   ├── 02_demographic_and_income_measures.dax    # Mean income, tenure, and overtime multipliers
 │   └── 03_sorting_and_utility_measures.dax       # Dynamic SWITCH sort keys for axis alignment
 ├── power_query/
-│   └── m_transformations.m                       # Complete Power Query M ETL transformation script
+│   └── m_transformations.pq                       # Complete Power Query M ETL transformation script
 ├── documentation/
 │   ├── HR_Executive_Attrition_Presentation.pptx  # 11-slide C-suite presentation deck
 │   ├── HR_Executive_Attrition_10_Points_Speaker_Notes.pdf  # Mobile teleprompter speaker cards
