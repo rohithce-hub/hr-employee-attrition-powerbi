@@ -224,7 +224,6 @@ hr-employee-attrition-powerbi/
 │   └── m_transformations.pq                       # Complete Power Query M ETL transformation script
 ├── documentation/
 │   ├── HR_Executive_Attrition_Presentation.pptx  # 11-slide C-suite presentation deck
-│   ├── HR_Executive_Attrition_10_Points_Speaker_Notes.pdf  # Mobile teleprompter speaker cards
 │   └── hr_employees_report.pdf                   # High-resolution PDF export of dashboard
 └── screenshots/
     ├── dashboard_page1_overview.png              # Page 1 preview
@@ -248,9 +247,6 @@ hr-employee-attrition-powerbi/
    - Open `dashboard/hr_employees.pbix`.
 2. **Executive Presentation**:
    - Open `documentation/HR_Executive_Attrition_Presentation.pptx` in Microsoft PowerPoint.
-3. **Speaker Guide**:
-   - Review `documentation/HR_Executive_Attrition_10_Points_Speaker_Notes.pdf` formatted as mobile teleprompter cards.
-
 ---
 
 ## 👤 Author
