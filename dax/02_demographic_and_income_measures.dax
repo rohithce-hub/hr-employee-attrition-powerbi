@@ -1,0 +1,51 @@
+-- ============================================================
+-- DEMOGRAPHIC, INCOME & TENURE DAX MEASURES
+-- Model: HR Employee Attrition
+-- Author: Rohith Chandran E
+-- Target Table: _measures
+-- ============================================================
+
+-- 1. Average Monthly Income
+-- Mean monthly base pay across the filtered workforce population
+Average Monthly Income = 
+AVERAGE('WA_Fn-UseC_-HR-Employee-Attrition'[MonthlyIncome])
+
+
+-- 2. Average Tenure (Years at Company)
+-- Mean cumulative company tenure
+Average Tenure = 
+AVERAGE('WA_Fn-UseC_-HR-Employee-Attrition'[YearsAtCompany])
+
+
+-- 3. Average Years in Current Role
+Average Years in Current Role = 
+AVERAGE('WA_Fn-UseC_-HR-Employee-Attrition'[YearsInCurrentRole])
+
+
+-- 4. Average Years Since Last Promotion
+Average Years Since Last Promotion = 
+AVERAGE('WA_Fn-UseC_-HR-Employee-Attrition'[YearsSinceLastPromotion])
+
+
+-- 5. Attrition Rate by OverTime Cohort
+Attrition Rate (OverTime = Yes) = 
+CALCULATE(
+    [Attrition Rate],
+    'WA_Fn-UseC_-HR-Employee-Attrition'[OverTime] = "Yes"
+)
+
+Attrition Rate (OverTime = No) = 
+CALCULATE(
+    [Attrition Rate],
+    'WA_Fn-UseC_-HR-Employee-Attrition'[OverTime] = "No"
+)
+
+
+-- 6. Overtime Risk Multiplier
+-- Calculates ratio of overtime departure rate vs standard hours departure rate
+Overtime Risk Multiplier = 
+DIVIDE(
+    [Attrition Rate (OverTime = Yes)],
+    [Attrition Rate (OverTime = No)],
+    0
+)

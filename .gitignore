@@ -1,0 +1,29 @@
+# Power BI Temporary and Lock Files
+~$*.pbix
+*.backup.pbix
+*.pbit
+
+# Office and Presentation Temporary Files
+~$*.pptx
+~$*.docx
+~$*.xlsx
+
+# Windows System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python Cache / Temporary
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE / Editor Settings
+.vscode/
+.idea/

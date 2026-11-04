@@ -1,0 +1,46 @@
+-- ============================================================
+-- CORE KPI DAX MEASURES
+-- Model: HR Employee Attrition
+-- Author: Rohith Chandran E
+-- Target Table: _measures
+-- ============================================================
+
+-- 1. Total Employees
+-- Counts total headcount represented in the dataset
+Total Employees = 
+COUNTROWS('WA_Fn-UseC_-HR-Employee-Attrition')
+
+
+-- 2. Employees Who Left (Attrition Count)
+-- Computes the total number of voluntary/involuntary employee departures
+Employees Who Left = 
+CALCULATE(
+    COUNTROWS('WA_Fn-UseC_-HR-Employee-Attrition'),
+    'WA_Fn-UseC_-HR-Employee-Attrition'[Attrition] = "Yes"
+)
+
+
+-- 3. Attrition Rate (%)
+-- Safe division of departures over total workforce
+Attrition Rate = 
+DIVIDE(
+    [Employees Who Left],
+    [Total Employees],
+    0
+)
+
+
+-- 4. Active Employees
+-- Current retained workforce count
+Active Employees = 
+[Total Employees] - [Employees Who Left]
+
+
+-- 5. Retention Rate (%)
+-- Percentage of current workforce retained
+Retention Rate = 
+DIVIDE(
+    [Active Employees],
+    [Total Employees],
+    0
+)
