@@ -1,0 +1,3 @@
+# GitHub Linguist Language Overrides
+*.m linguist-language=Power Query
+*.pq linguist-language=Power Query
