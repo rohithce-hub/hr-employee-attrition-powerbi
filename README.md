@@ -225,7 +225,6 @@ hr-employee-attrition-powerbi/
 ├── documentation/
 │   ├── HR_Executive_Attrition_Presentation.pptx  # 11-slide C-suite presentation deck
 │   ├── HR_Executive_Attrition_10_Points_Speaker_Notes.pdf  # Mobile teleprompter speaker cards
-│   ├── HR_Executive_Attrition_Presentation_Guide.pdf       # Comprehensive defense & metrics guide
 │   └── hr_employees_report.pdf                   # High-resolution PDF export of dashboard
 └── screenshots/
     ├── dashboard_page1_overview.png              # Page 1 preview
